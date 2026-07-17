@@ -1,7 +1,16 @@
 Work station config
 
-All config files are **heavily *influenced* by theprimeagen**!
+Includes the following:
+- nvim config
+- kitty confg
+- tmux sessionizer
+
+Installation:
+```bash
+chmod +x setup.sh
+./setup.sh
+```
 
 [!NOTE] 
->Finally migrated away from packer into lazy
-
+> All config files are **heavily *influenced* by theprimeagen**!
+> Finally migrated away from packer into lazy
