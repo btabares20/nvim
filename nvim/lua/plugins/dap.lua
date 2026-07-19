@@ -69,6 +69,19 @@ return {
                 })[1]
             )
             require("dap-python").setup(root .. "/venv/bin/python")
+            local dap = require("dap")
+            table.insert(dap.configurations.python, {
+                name = "module",
+                type = "python",
+                request = "launch",
+                module = function()
+                    return vim.fn.expand("%:r")
+                        :gsub("/", ".")
+                        :gsub("\\", ".")
+                end,
+                cwd = "${workspaceFolder}",
+                justMyCode = false,
+            })
         end
     },
     {
